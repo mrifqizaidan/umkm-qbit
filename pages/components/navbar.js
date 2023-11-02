@@ -10,33 +10,24 @@ const Navbar = () => {
   };
 
   const handleUserClick = () => {
-    router.push('/users');
+    router.push('about');
   };
 
-  const handleUser2Click = () => {
-    router.push('/users2');
-  };
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-info">
+    <nav className="navbar navbar-expand-lg navbar-light" style={{ backgroundColor: 'white' }}>
       <div className="container">
+        <div className="navbar-brand" onClick={handleHomeClick} style={{ cursor: 'pointer' }}>
+          <img src="/qbit.png" alt="qbit logo" className="logo" />
+        </div>
         <ul className="navbar-nav mx-auto">
-          <li className="nav-item">
-            <button className="nav-link btn fw-bold" onClick={handleHomeClick}>
-              Home |
-            </button>
-          </li>
-          <li className="nav-item">
-            <button className="nav-link btn fw-bold" onClick={handleUserClick}>
-              | Users
-            </button>
-          </li>
-          <li className="nav-item">
-            <button className="nav-link btn fw-bold" onClick={handleUser2Click}>
-              | Users 2
-            </button>
-          </li>
         </ul>
       </div>
+      <style jsx>{`
+        .logo {
+          width: 50px; // Sesuaikan ukuran logo sesuai kebutuhan
+          height: 50px;
+        }
+      `}</style>
     </nav>
   );
 };

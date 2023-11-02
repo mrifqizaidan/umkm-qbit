@@ -22,3 +22,14 @@ body {
   background-color: #ccbecc;
   color: rgb(var(--foreground-rgb));
 }
+
+@font-face {
+  font-family: 'CracklingFire'; 
+  src: url('./CracklingFire.ttf') format('truetype'); 
+  font-style: normal;
+}
+
+body {
+  font-family: 'CracklingFire', sans-serif; 
+}
+
